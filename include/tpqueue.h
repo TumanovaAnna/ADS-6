@@ -8,7 +8,8 @@ class TPQueue {
  private:
     T* arr;
     int last, first, count; 
- public:
+
+public:
     TPQueue() :first(0), last(0), count(0) { arr = new T[size]; }
     bool isEmpty() const {
         return 0 == count;
@@ -19,15 +20,15 @@ class TPQueue {
     const T& pop() {
         if (isEmpty()) {
             throw std::string("Empty");
-        } else {
+        }else{
             count--;
             return arr[first++ % size];
         }
     }
-    void push(const T& value){
+    void push(const T& value) {
         if (isFull()) {
             throw std::string("Full");
-          } else {
+          }else{
             int x = last;
             arr[last % size] = value;
             T temp = arr[x % size];
