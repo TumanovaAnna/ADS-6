@@ -7,9 +7,7 @@ template<typename T, int size>
 class TPQueue {
  private:
     T* arr;
-    int last, first, count;
-    
-
+    int last, first, count; 
  public:
     TPQueue() :first(0), last(0), count(0) { arr = new T[size]; }
     bool isEmpty() const {
